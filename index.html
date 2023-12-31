@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Notes</title>
+    <script src="noteTaking.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="./lib/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+    
+    <div id="dashboard">
+    <h1>Create Notes</h1>  
+        <div id="block">
+            <h2 for="note-title">Title:</h2>
+            <input type="text" id="note-title" name="note-title"><br><br>
+            <label for="positionNum"> Position Number:</label>
+            <div class="quantity">
+              <input type="number" min="1" max="9" step="1" value="1" id="positionNum">
+            </div>
+            <h2 for="note-content">Note:</h2>
+            <textarea id="note-content" name="note-content" rows="10" cols="50"></textarea><br>
+            <button id="btn_save" onclick="createNote()">Create Note
+        </div>
+
+        <div id="block">
+            <br><button id="id_tempDelete" onclick="tempDelete()" style="width: 200px;">Temporarily Remove Note</button>
+            <div class="quantity">
+              <input type="number" min="1" max="9" step="1" value="1" id="positionNumTempRemove">
+            </div>
+            <button id="id_restoreNote" onclick="restoreNote()" style="width: 100px;">Restore Note</button><br><br>
+            <button id="btn_selected" onclick="removeAd()" style="width: 200px;">Remove Note</button>
+            <div class="quantity">
+              <input type="number" min="1" max="9" step="1" value="1" id="positionNumFullRemove">
+            </div>
+            <button id="btn_deleteAll" onclick="deleteAll()" style="width: 200px;">Remove All Notes</button>
+        </div>
+    </div>
+    <div id="noteboard"></div>
+
+    </div>
+  </body>
+</html>
